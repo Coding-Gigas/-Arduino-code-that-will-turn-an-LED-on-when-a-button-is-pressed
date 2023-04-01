@@ -1,0 +1,18 @@
+int buttonPin = 2;    // the number of the button pin
+int ledPin = 13;      // the number of the LED pin
+int buttonState = 0;  // variable for storing the button state
+
+void setup() {
+  pinMode(buttonPin, INPUT);   // set the button pin as input
+  pinMode(ledPin, OUTPUT);     // set the LED pin as output
+}
+
+void loop() {
+  buttonState = digitalRead(buttonPin);   // read the state of the button
+
+  if (buttonState == HIGH) {   // if button is pressed
+    digitalWrite(ledPin, HIGH);  // turn on the LED
+  } else {   // if button is not pressed
+    digitalWrite(ledPin, LOW);   // turn off the LED
+  }
+}
